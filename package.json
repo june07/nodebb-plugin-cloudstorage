@@ -26,7 +26,6 @@
   },
   "homepage": "https://github.com/june07/nodebb-plugin-cloudstorage#readme",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.3",
     "cloudinary": "^1.14.0",
     "debug": "^4.1.1",
     "nodebb-theme-persona": "^10.1.12"
