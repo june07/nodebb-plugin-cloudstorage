@@ -1,6 +1,6 @@
 {
   "name": "nodebb-plugin-cloudstorage",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "nbbpm": {
     "compatibility": "^1.12.2"
   },

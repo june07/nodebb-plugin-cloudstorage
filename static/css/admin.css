@@ -1,3 +1,7 @@
 div > div.card > div.card-header > img {
     margin-left: 100px;
 }
+#update-frame {
+    width: -webkit-fill-available;
+    height: -webkit-fill-available;
+}
