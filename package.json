@@ -24,7 +24,8 @@
   },
   "homepage": "https://github.com/june07/nodebb-plugin-cloudstorage#readme",
   "dependencies": {
-    "cloudinary": "^1.14.0"
+    "cloudinary": "^1.14.0",
+    "imagekit": "^1.5.0"
   },
   "devDependencies": {
     "debug": "^4.1.1"

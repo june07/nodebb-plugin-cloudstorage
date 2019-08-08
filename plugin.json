@@ -12,9 +12,6 @@
   "staticDirs": {
     "static": "./static"
   },
-  "modules": {
-    "cloudinary": "static/js/cloudinary.js"
-  },
   "css": [
     "static/css/admin.css"
   ],
