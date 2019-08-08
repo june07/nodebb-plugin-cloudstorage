@@ -47,13 +47,13 @@
 					<!-- END -->
 					<!-- IF storageProviderHelper(@key, "imagekit") -->
 					<div class="form-group"> <label>ImageKit ID</label>
-						<input type="text" class="form-control" name="@key-imagekitid" placeholder="Enter your ImageKit ID" required="required">
+						<input type="text" class="form-control" name="@key-imagekit_id" placeholder="Enter your ImageKit ID" required="required">
 						<small class="form-text text-muted">The ImageKit Id associated with your account.</small> </div>
                     <div class="form-group"> <label>API Key</label>
-						<input type="text" class="form-control" name="@key-apikey" placeholder="Enter your API Key" required="required">
+						<input type="text" class="form-control" name="@key-public_key" placeholder="Enter your API Key" required="required">
 						<small class="form-text text-muted">Your public API key.</small> </div>
                     <div class="form-group"> <label>API Secret</label>
-						<input type="password" class="form-control" name="@key-apisecret" placeholder="Enter your API Secret" required="required" autocomplete="off">
+						<input type="password" class="form-control" name="@key-private_key" placeholder="Enter your API Secret" required="required" autocomplete="off">
 						<small class="form-text text-muted">Your private API secret.</small> </div>
 					<!-- END -->
 					<!-- IF storageProviderHelper(@key, "imgur") -->

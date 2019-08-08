@@ -41,11 +41,11 @@ plugin.filterUploadImage = function filterUploadImage(params, callback) {
     fs.readFile(image.path, (error, data) => {
       if (error) return reject(error);
       let etag = crypto.createHash('md5').update(data).digest('hex');
-      resolve(etag);
+      resolve({data, etag});
     });
   })
-  .then(etag => {
-    controllers.providersUpload(image, etag, callback);
+  .then(fileObject => {
+    controllers.providersUpload(image, fileObject, callback);
   });
 }
 
