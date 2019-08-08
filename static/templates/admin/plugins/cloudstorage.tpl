@@ -6,6 +6,16 @@
 
 			<form class="cloudstorage-settings">
 
+			<div class="form-group">
+				<label for="activeProviderSelect">Active Cloud Provider</label>
+				<select class="form-control" id="activeProviderSelect" name="activeProvider">
+				<!-- BEGIN settings.providerSettings -->
+				<option <!-- IF ../disabled -->disabled<!-- END -->>@key</option>
+				<!-- END settings.providerSettings -->
+				</select>
+				<small class="form-text text-muted">Only the active provider will be used for uploads.</small>
+			</div>
+
           <ul class="nav nav-pills">
 		  <!-- BEGIN settings.providerSettings -->
 			<li class="nav-item <!-- IF @first -->active in<!-- END -->"> <a href="#" class="active nav-link" data-toggle="pill" data-target="#@key">@key</a> </li>
@@ -35,8 +45,19 @@
 						<input type="password" class="form-control" name="@key-secret" placeholder="Enter your API Secret" required="required" autocomplete="off">
 						<small class="form-text text-muted">Mandatory for server-side operations. Used together with the API key to communicate with the Cloudinary API and sign requests.</small> </div>
 					<!-- END -->
+					<!-- IF storageProviderHelper(@key, "imagekit") -->
+					<div class="form-group"> <label>ImageKit ID</label>
+						<input type="text" class="form-control" name="@key-imagekitid" placeholder="Enter your ImageKit ID" required="required">
+						<small class="form-text text-muted">The ImageKit Id associated with your account.</small> </div>
+                    <div class="form-group"> <label>API Key</label>
+						<input type="text" class="form-control" name="@key-apikey" placeholder="Enter your API Key" required="required">
+						<small class="form-text text-muted">Your public API key.</small> </div>
+                    <div class="form-group"> <label>API Secret</label>
+						<input type="password" class="form-control" name="@key-apisecret" placeholder="Enter your API Secret" required="required" autocomplete="off">
+						<small class="form-text text-muted">Your private API secret.</small> </div>
+					<!-- END -->
 					<!-- IF storageProviderHelper(@key, "imgur") -->
-						Imgur stuff goes here
+						Imgur support may be added in the future.  Feel free to contribute to <a href="https://github.com/june07/nodebb-plugin-cloudstorage">the project on GitHub</a>
 					<!-- END -->
                 </div>
               </p>

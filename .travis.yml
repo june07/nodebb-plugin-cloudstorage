@@ -1,6 +1,12 @@
+before_install:
+  - sudo apt-get update -y
+  - chmod +x build.sh
+  
 language: node_js
 node_js:
   - "node"
+
+script: ./build.sh
 
 cache: npm
 
