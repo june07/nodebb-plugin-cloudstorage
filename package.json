@@ -4,7 +4,7 @@
   "nbbpm": {
     "compatibility": "^1.12.2"
   },
-  "description": "Cloud storage plugin for NodeBB",
+  "description": "Cloud storage plugin (Cloudinary, ImageKit, Imgur) for NodeBB",
   "main": "library.js",
   "scripts": {},
   "repository": {
@@ -15,6 +15,9 @@
     "nodebb",
     "plugin",
     "cloudinary",
+    "imagekit",
+    "imgur",
+    "photos",
     "storage"
   ],
   "author": "june07",
