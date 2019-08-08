@@ -6,8 +6,7 @@
   },
   "description": "Cloud storage plugin for NodeBB",
   "main": "library.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/june07/nodebb-plugin-cloudstorage.git"
@@ -25,8 +24,9 @@
   },
   "homepage": "https://github.com/june07/nodebb-plugin-cloudstorage#readme",
   "dependencies": {
-    "cloudinary": "^1.14.0",
-    "debug": "^4.1.1",
-    "nodebb-theme-persona": "^10.1.12"
+    "cloudinary": "^1.14.0"
+  },
+  "devDependencies": {
+    "debug": "^4.1.1"
   }
 }
