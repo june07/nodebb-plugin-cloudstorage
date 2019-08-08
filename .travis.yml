@@ -1,5 +1,4 @@
 before_install:
-  - sudo apt-get update -y
   - chmod +x build.sh
   
 language: node_js
