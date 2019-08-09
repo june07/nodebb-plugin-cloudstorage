@@ -1,6 +1,6 @@
 # Cloud storage plugin for NodeBB (Cloudinary)
 -----------
-Adds [Cloudinary](https://cloudinary.com) support for image storage/hosting.
+Adds [Cloudinary](https://cloudinary.com) and [ImageKit](https://imagekit.io) support for image storage/hosting.
 
 ## Installation
 1.  Can be installed via the NodeBB plugins page.
@@ -20,5 +20,5 @@ Or in the case you want to contribute to the project, you can git clone/npm inst
 	```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU0OTAyNDg0XX0=
+eyJoaXN0b3J5IjpbLTcxNDA3MzM4N119
 -->
