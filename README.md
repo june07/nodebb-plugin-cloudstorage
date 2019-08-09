@@ -1,7 +1,7 @@
 Provider web sites:
- - [Cloudinary](https://cloudinary.com)
- - [ImageKit](https://imagekit.io)
+ - <a href="" target="https://cloudinary.com"_blank">Cloudinary</a>
+ - <a href="" target="https://imagekit.io"_blank">ImageKit</a>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzY0MzUyMl19
+eyJoaXN0b3J5IjpbMTQwMTU0NDMyNCwtMTgzNjQzNTIyXX0=
 -->
