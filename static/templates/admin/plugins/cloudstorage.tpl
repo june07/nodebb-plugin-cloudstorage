@@ -68,7 +68,7 @@
         </div>
         <div class="col-md-6">
 			<h4>Help</h4>
-			<iframe id="update-frame" frameborder="0" scrolling="no" src="https://june07.github.io/nodebb-plugin-cloudstorage/"></iframe>
+			<iframe id="update-frame" frameborder="0" scrolling="no" src="https://june07.github.io/nodebb-plugin-cloudstorage/help"></iframe>
 		</div>
       </div>
     </div>
