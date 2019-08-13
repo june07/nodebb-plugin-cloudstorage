@@ -5,6 +5,7 @@ const crypto = require.main.require('crypto'),
   debug = require('debug')('nodebb-plugin-cloudstorage:library'),
 
   controllers = require('./lib/controllers')(),
+  errorHandler = require('./lib/errorHandler'),
 
   NodeBB_Controllers = require.main.require('./src/controllers'),
   NodeBB_Templates = require.main.require('benchpressjs');
@@ -12,6 +13,7 @@ const crypto = require.main.require('crypto'),
 let plugin = {};
 
 plugin.controllers = controllers;
+plugin.errorHandler = errorHandler;
 
 plugin.staticAppPreload = function(params, callback) {
   // params = { app, middleware }

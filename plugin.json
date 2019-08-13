@@ -3,6 +3,7 @@
   "url": "https://github.com/june07/nodebb-plugin-cloudstorage",
   "library": "./library.js",
   "hooks": [
+    { "hook": "filter:error.handle", "method": "errorHandler" },
     { "hook": "static:app.load", "method": "staticAppLoad" },
     { "hook": "filter:uploadImage", "method": "filterUploadImage" },
     { "hook": "filter:admin.header.build", "method": "controllers.renderAdminMenu" }
