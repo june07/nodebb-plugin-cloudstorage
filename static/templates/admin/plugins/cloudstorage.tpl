@@ -56,6 +56,17 @@
 						<input type="password" class="form-control" name="@key-private_key" placeholder="Enter your API Secret" required="required" autocomplete="off">
 						<small class="form-text text-muted">Your private API secret.</small> </div>
 					<!-- END -->
+					<!-- IF storageProviderHelper(@key, "awss3") -->
+					<div class="form-group"> <label>AWS S3 Bucket</label>
+						<input type="text" class="form-control" name="@key-awss3_bucket" placeholder="Enter your AWS S3 Bucket" required="required">
+						<small class="form-text text-muted">The S3 Bucket you want your images stored in.</small> </div>
+                    <div class="form-group"> <label>API Access Key Id</label>
+						<input type="text" class="form-control" name="@key-accessKeyId" placeholder="Enter your AWS access key ID" required="required">
+						<small class="form-text text-muted">Your AWS access key ID.</small> </div>
+                    <div class="form-group"> <label>API Secret Acccess Key</label>
+						<input type="password" class="form-control" name="@key-secretAccessKey" placeholder="Enter your AWS secret access key." required="required" autocomplete="off">
+						<small class="form-text text-muted">Your AWS secret access key.</small> </div>
+					<!-- END -->
 					<!-- IF storageProviderHelper(@key, "imgur") -->
 						Imgur support may be added in the future.  Feel free to contribute to <a href="https://github.com/june07/nodebb-plugin-cloudstorage">the project on GitHub</a>
 					<!-- END -->
