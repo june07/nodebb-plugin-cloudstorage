@@ -25,6 +25,7 @@ plugin.staticAppLoad = function(data, callback) {
   debug('--------- staticAppLoad ---------');
   data.router.get('/admin/plugins/cloudstorage', data.middleware.applyCSRF, data.middleware.admin.buildHeader, controllers.renderAdmin);
   data.router.get('/api/admin/plugins/cloudstorage', data.middleware.applyCSRF, controllers.renderAdmin);
+  controllers.loadSettings();
 
   NodeBB_Templates.registerHelper('storageProviderHelper', (data, provider) => {
     debug('--------- storageProviderHelper ---------');
