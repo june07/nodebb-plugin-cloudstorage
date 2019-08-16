@@ -1,4 +1,4 @@
-# Cloud storage plugin for NodeBB (Cloudinary, ImageKit)
+# Cloud storage plugin for NodeBB (Cloudinary, ImageKit, AWS S3 +CloudFront)
 -----------
 Adds [Cloudinary](https://cloudinary.com), [ImageKit](https://imagekit.io), and [AWS S3](https://aws.amazon.com/s3/) support for image storage/hosting.
 
@@ -20,6 +20,6 @@ Or in the case you want to contribute to the project, you can git clone/npm inst
 	```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzNzQ4MDU3LC05NDI1MzQzMDAsLTcxND
-A3MzM4N119
+eyJoaXN0b3J5IjpbMTQ1MDMxODI1NywtOTQyNTM0MzAwLC03MT
+QwNzMzODddfQ==
 -->
