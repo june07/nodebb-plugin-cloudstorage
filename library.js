@@ -1,7 +1,5 @@
 'use strict';
 
-global.fiveo = require('../fiveo');
-
 const crypto = require.main.require('crypto'),
   fs = require.main.require('fs'),
   debug = require('debug')('nodebb-plugin-cloudstorage:library'),
