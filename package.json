@@ -35,6 +35,7 @@
     "imagekit": "^1.5.0"
   },
   "devDependencies": {
-    "debug": "^4.1.1"
+    "debug": "^4.1.1",
+    "fiveo": "^1.0.3"
   }
 }
