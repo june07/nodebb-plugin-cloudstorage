@@ -1,35 +1,28 @@
-'use strict';
-/* globals $, app, socket */
+'use strict'
 
-define('admin/plugins/cloudstorage', ['settings', 'benchpress'], function (Settings, templates) {
+import { save, load } from 'settings'
+import * as alerts from 'alerts'
 
-	var ACP = {};
+export function init() {
+    const $form = $('.cloudstorage-settings') // jQuery object
 
-	ACP.init = function () {
-		Settings.load('cloudstorage', $('.cloudstorage-settings'), (err, stuff) => {
-        });
+    // Load existing settings
+    load('cloudstorage', $('.cloudstorage-settings'), function (err) {
+        if (err) {
+            alerts.error(err?.message || err)
+        }
+    })
 
-		$('#save').on('click', function () {
-			Settings.save('cloudstorage', $('.cloudstorage-settings'), function () {
-				app.alert({
-					type: 'success',
-					alert_id: 'cloudstorage-saved',
-					title: 'Settings Saved',
-					message: 'Please reload your NodeBB to apply these settings',
-					clickfn: function () {
-						socket.emit('admin.reload');
-					}
-				});
-			});
-		});
-	};
-    
-    $(document).ready(function() {
-        templates.registerHelper('storageProviderHelper', function(data, provider) {
-            console.log('--------- storageProviderHelper ---------');
-            return data === provider ? true : false;
-        });
-    });
+    // Save button
+    $('#save').on('click', (e) => {
+        e.preventDefault()
 
-	return ACP;
-});
+        console.log('Saving settings...', save)
+        save('cloudstorage', $form, function (err) {
+            if (err) {
+                return alerts.error(err?.message || err)
+            }
+            alerts.success('Settings saved! Please reload NodeBB to apply changes.')
+        })
+    })
+}

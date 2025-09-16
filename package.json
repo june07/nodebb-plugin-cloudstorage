@@ -1,10 +1,10 @@
 {
   "name": "nodebb-plugin-cloudstorage",
-  "version": "1.0.24",
+  "version": "2.0.0",
   "nbbpm": {
     "compatibility": "^1.12.2"
   },
-  "description": "Cloud storage plugin (Cloudinary, ImageKit, AWS S3) for NodeBB",
+  "description": "Cloud storage plugin (GitHub, Cloudinary, ImageKit, S3) for NodeBB",
   "main": "library.js",
   "scripts": {},
   "repository": {
@@ -30,12 +30,13 @@
   },
   "homepage": "https://github.com/june07/nodebb-plugin-cloudstorage#readme",
   "dependencies": {
-    "aws-sdk": "^2.788.0",
-    "cloudinary": "^1.23.0",
-    "imagekit": "^5.0.0"
+    "@octokit/rest": "^22.0.0",
+    "aws-sdk": "^2.1692.0",
+    "cloudinary": "^2.7.0",
+    "file-type": "^21.0.0",
+    "imagekit": "^6.0.0"
   },
   "devDependencies": {
-    "debug": "^4.2.0",
-    "fiveo": "^1.0.3"
+    "debug": "^4.4.3"
   }
 }
