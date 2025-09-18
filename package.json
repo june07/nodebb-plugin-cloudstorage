@@ -34,8 +34,7 @@
     "aws-sdk": "^2.1692.0",
     "cloudinary": "^2.7.0",
     "file-type": "^21.0.0",
-    "imagekit": "^6.0.0",
-    "uuid": "^13.0.0"
+    "imagekit": "^6.0.0"
   },
   "devDependencies": {
     "debug": "^4.4.3"
