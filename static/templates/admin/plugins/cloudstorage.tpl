@@ -1,13 +1,7 @@
 <div class="py-5">
   <div class="acp-page-container">
-    <div component="settings/main/header" class="row border-bottom py-2 m-0 sticky-top acp-page-main-header align-items-center">
-        <div class="col-12 col-md-8 px-0 mb-1 mb-md-0">
-            <h4 class="fw-bold tracking-tight mb-0">Cloudstorage</h4>
-        </div>
-        <div class="col-12 col-md-4 px-0 px-md-3">
-            <button id="save" class="btn btn-primary btn-sm fw-semibold ff-secondary w-100 text-center text-nowrap">save-changes</button>
-        </div>
-    </div>
+    <!-- IMPORT admin/partials/settings/header.tpl -->
+
     <div class="row m-0">
       
         <form class="cloudstorage-settings">
@@ -45,6 +39,7 @@
                   <div class="card-header">
                     <img class="img-fluid" src="{../logo}" alt="{@key}" style="width:100px; height: 50px; margin-left: 0">
                   </div>
+
                   <div class="card-body">
                     <!-- Provider-specific fields -->
 
@@ -69,9 +64,15 @@
                     </div>
 
                     <div class="mb-3">
-                    <label class="form-label">Path in Repository</label>
+                    <label class="form-label">Repository Path</label>
                     <input type="text" class="form-control" name="{@key}-path" placeholder="Enter the folder path for uploads">
                     <div class="form-text">Relative path inside the repository where images will be stored, e.g., <code>uploads/</code>.</div>
+                    </div>
+
+                    <div class="mb-3">
+                    <label class="form-label">Repository Branch</label>
+                    <input type="text" class="form-control" name="{@key}-branch" placeholder="Enter the branch for uploads">
+                    <div class="form-text">Git branch where images will be stored, e.g., <code>main</code>.</div>
                     </div>
 
                     <div class="mb-3">
@@ -160,5 +161,7 @@
         <h4>Help</h4>
         <iframe id="update-frame" frameborder="0" scrolling="no" src="https://june07.github.io/nodebb-plugin-cloudstorage/help" class="w-100" style="height:600px;"></iframe>
     </div>
+
+    <!-- IMPORT admin/partials/settings/toc.tpl -->
   </div>
 </div>

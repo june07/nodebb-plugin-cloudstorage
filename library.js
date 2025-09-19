@@ -18,11 +18,18 @@ plugin.errorHandler = errorHandler
 plugin.staticAppPreload = function (params, callback) {
     // params = { app, middleware }
     debug('--------- staticAppPreload ---------')
+
     callback()
 }
 plugin.staticAppLoad = function (data, callback) {
     // data = { app, router, middleware, controllers }
     debug('--------- staticAppLoad ---------')
+
+    NodeBB_Templates.registerHelper('storageProviderHelper', (data, provider) => {
+        // debug('--------- storageProviderHelper ---------', data, provider)
+        return data === provider ? true : false
+    })
+
     data.router.get('/admin/plugins/cloudstorage', data.middleware.applyCSRF, data.middleware.admin.buildHeader, controllers.renderAdmin)
     data.router.get('/api/admin/plugins/cloudstorage', data.middleware.applyCSRF, controllers.renderAdmin)
     data.router.get('/cloudstorage/:sha', async (req, res) => {
@@ -39,7 +46,7 @@ plugin.staticAppLoad = function (data, callback) {
 
             if (fallback) {
                 debug(`Redirecting to fallback URL: ${fallback}`)
-                
+
                 return res.redirect(fallback) // fallback URL
             } else {
                 return res.status(404).send('File not found')
@@ -73,11 +80,6 @@ plugin.staticAppLoad = function (data, callback) {
     })
 
     controllers.loadSettings()
-
-    NodeBB_Templates.registerHelper('storageProviderHelper', (data, provider) => {
-        // debug('--------- storageProviderHelper ---------', data, provider)
-        return data === provider ? true : false
-    })
 
     //debug(params);
     callback()

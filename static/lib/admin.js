@@ -17,7 +17,7 @@ export function init() {
     $('#save').on('click', (e) => {
         e.preventDefault()
 
-        console.log('Saving settings...', save)
+        console.log('Saving settings...')
         save('cloudstorage', $form, function (err) {
             if (err) {
                 return alerts.error(err?.message || err)
