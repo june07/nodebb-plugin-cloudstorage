@@ -25,4 +25,11 @@ export function init() {
             alerts.success('Settings saved! Please reload NodeBB to apply changes.')
         })
     })
+
+    function toggleProviderFields(provider) {
+        $('.cloudstorage-provider').hide()        // hide all
+        $('.cloudstorage-provider.' + provider).show()  // show selected
+    }
+
+
 }

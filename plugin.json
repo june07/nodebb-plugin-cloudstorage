@@ -1,5 +1,7 @@
 {
     "id": "nodebb-plugin-cloudstorage",
+    "name": "Cloud Storage",
+    "description": "Upload and serve images from various cloud storage providers like GitHub Pages, S3 (AWS, Digital Ocean, ...), ImageKit, Cloudinary and more.",
     "url": "https://github.com/june07/nodebb-plugin-cloudstorage",
     "main": "./library.js",
     "hooks": [
