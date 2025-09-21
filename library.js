@@ -53,7 +53,7 @@ plugin.staticAppLoad = function (data, callback) {
         useCdn = useCdn || false
 
         // Check if we need to verify CDN
-        if (!useCdn || (!lastChecked || now - lastChecked >= freshnessWindow)) {
+        if (!useCdn || !lastChecked || (now - lastChecked >= freshnessWindow)) {
             try {
                 const response = await fetch(cdnUrl, { method: 'HEAD' })
 
@@ -76,6 +76,8 @@ plugin.staticAppLoad = function (data, callback) {
         }
 
         const url = useCdn ? cdnUrl : downloadUrl
+
+        debug(`Redirecting to: ${url} (useCdn: ${useCdn})`)
 
         res.redirect(url)
     })
