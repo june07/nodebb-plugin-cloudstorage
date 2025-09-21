@@ -53,7 +53,7 @@ plugin.staticAppLoad = function (data, callback) {
         useCdn = useCdn || false
 
         // Check if we need to verify CDN
-        if (!useCdn || (lastChecked && now - lastChecked >= freshnessWindow)) {
+        if (!useCdn || (!lastChecked || now - lastChecked >= freshnessWindow)) {
             try {
                 const response = await fetch(cdnUrl, { method: 'HEAD' })
 
@@ -72,7 +72,7 @@ plugin.staticAppLoad = function (data, callback) {
             // Update cached object
             await db.setObject(key, { ...cached, lastChecked: now, useCdn })
         } else {
-            debug(`Using cached CDN URL: ${cdnUrl}`)
+            debug(`Using cached CDN URL: ${cdnUrl}, useCdn: ${useCdn}`)
         }
 
         const url = useCdn ? cdnUrl : downloadUrl
