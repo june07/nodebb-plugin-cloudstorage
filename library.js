@@ -77,7 +77,7 @@ plugin.staticAppLoad = function (data, callback) {
 
         const url = useCdn ? cdnUrl : downloadUrl
 
-        debug(`Redirecting to: ${url} (useCdn: ${useCdn})`)
+        debug(`Redirecting to: ${url} (useCdn: ${useCdn}, downloadUrl: ${downloadUrl}, cached: ${JSON.stringify(cached)})`)
 
         res.redirect(url)
     })
