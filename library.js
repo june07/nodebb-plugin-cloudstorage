@@ -34,7 +34,7 @@ plugin.staticAppLoad = function (data, callback) {
         const freshnessWindow = 5 * 60 * 1000 // 5 minutes
         const db = require.main.require('./src/database')
         const key = `cloudstorage:github:mapping:${sha}`
-        const cached = await db.getObject(key)
+        const cached = await db.getObject(key) || {}
 
         if (!cached) {
             const fallback = req.query.f && Buffer.from(req.query.f, 'base64').toString('utf-8')
@@ -53,12 +53,15 @@ plugin.staticAppLoad = function (data, callback) {
         useCdn = useCdn || false
 
         // Check if we need to verify CDN
-        if (!useCdn || now - lastChecked >= freshnessWindow) {
+        if (!useCdn || (lastChecked && now - lastChecked >= freshnessWindow)) {
             try {
                 const response = await fetch(cdnUrl, { method: 'HEAD' })
+
                 if (response.ok) {
+                    debug(`CDN URL is live: ${cdnUrl}, response: ${response.status} ${response.statusText}`)
                     useCdn = true
                 } else {
+                    debug(`CDN URL is not live: ${cdnUrl}`)
                     useCdn = false
                 }
             } catch (err) {
@@ -68,9 +71,12 @@ plugin.staticAppLoad = function (data, callback) {
 
             // Update cached object
             await db.setObject(key, { ...cached, lastChecked: now, useCdn })
+        } else {
+            debug(`Using cached CDN URL: ${cdnUrl}`)
         }
 
         const url = useCdn ? cdnUrl : downloadUrl
+
         res.redirect(url)
     })
 
