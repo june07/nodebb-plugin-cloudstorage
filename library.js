@@ -50,7 +50,7 @@ plugin.staticAppLoad = function (data, callback) {
 
         let { cdnUrl, downloadUrl, lastChecked, useCdn } = cached
         lastChecked = parseInt(lastChecked, 10) || 0
-        useCdn = useCdn || false
+        useCdn = useCdn === true || /true/i.test(useCdn)
 
         // Check if we need to verify CDN
         if (!useCdn || !lastChecked || (now - lastChecked >= freshnessWindow)) {
