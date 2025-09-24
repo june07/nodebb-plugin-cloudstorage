@@ -1,42 +1,55 @@
 {
-  "name": "nodebb-plugin-cloudstorage",
-  "version": "2.2.8",
-  "nbbpm": {
-    "compatibility": "^1.12.2"
-  },
-  "description": "Cloud storage plugin (GitHub, Cloudinary, ImageKit, S3) for NodeBB",
-  "main": "library.js",
-  "scripts": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/june07/nodebb-plugin-cloudstorage.git"
-  },
-  "keywords": [
-    "nodebb",
-    "plugin",
-    "cloudinary",
-    "imagekit",
-    "imgur",
-    "photos",
-    "storage",
-    "s3",
-    "amazon",
-    "AWS"
-  ],
-  "author": "june07",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/june07/nodebb-plugin-cloudstorage/issues"
-  },
-  "homepage": "https://github.com/june07/nodebb-plugin-cloudstorage#readme",
-  "dependencies": {
-    "@octokit/rest": "^22.0.0",
-    "aws-sdk": "^2.1692.0",
-    "cloudinary": "^2.7.0",
-    "file-type": "^21.0.0",
-    "imagekit": "^6.0.0"
-  },
-  "devDependencies": {
-    "debug": "^4.4.3"
-  }
+    "name": "nodebb-plugin-cloudstorage",
+    "version": "2.3.0",
+    "nbbpm": {
+        "compatibility": "^1.12.2"
+    },
+    "description": "Cloud storage plugin (GitHub, Cloudinary, ImageKit, S3) for NodeBB",
+    "main": "library.js",
+    "scripts": {
+        "prepare": "node scripts/sync-versions.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/june07/nodebb-plugin-cloudstorage.git"
+    },
+    "keywords": [
+        "nodebb",
+        "nodebb-plugin",
+        "plugin",
+        "cloudinary",
+        "imagekit",
+        "imgur",
+        "photos",
+        "storage",
+        "cloud-storage",
+        "s3",
+        "amazon",
+        "AWS",
+        "image-upload",
+        "file-upload",
+        "media-library",
+        "github",
+        "cdn"
+    ],
+    "funding": {
+        "type": "github",
+        "url": "https://github.com/sponsors/june07"
+    },
+    "author": "Adrian <adrian@june07.com> (https://june07.com)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/june07/nodebb-plugin-cloudstorage/issues"
+    },
+    "homepage": "https://june07.com/nodebb-plugin-cloudstorage",
+    "dependencies": {
+        "@octokit/rest": "^22.0.0",
+        "aws-sdk": "^2.1692.0",
+        "cloudinary": "^2.7.0",
+        "file-type": "^21.0.0",
+        "imagekit": "^6.0.0"
+    },
+    "devDependencies": {
+        "debug": "^4.4.3"
+    }
 }
