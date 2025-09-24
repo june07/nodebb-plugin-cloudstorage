@@ -1,4 +1,4 @@
-# Cloud storage plugin for NodeBB (Cloudinary, ImageKit, AWS S3 +CloudFront)
+# Cloud storage plugin for NodeBB (GitHub Pages, Cloudinary, ImageKit, AWS S3 +CloudFront)
 -----------
 Adds [GitHub](https://github.com), [Cloudinary](https://cloudinary.com), [ImageKit](https://imagekit.io), and [AWS S3](https://aws.amazon.com/s3/) support for image storage/hosting.
 
